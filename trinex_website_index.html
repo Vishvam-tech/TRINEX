@@ -1,0 +1,196 @@
+<!--
+TRINEX - Single-file landing & demo store (Free-host friendly)
+How to use:
+1) Download this file and rename to `index.html`.
+2) Open locally in a browser or host on GitHub Pages / Netlify / 8b / any static host.
+3) To turn the demo shop into a working store, connect to a payment provider or embed a buy button (Shopify/WooCommerce Buy Buttons or use PayPal/Razorpay scripts).
+
+Includes:
+- Home (hero), Featured products (demo), About, Gallery, Contact
+- Black & Gold theme, responsive layout
+- Uses Unsplash images (free to use) as placeholders
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>TRINEX — See Beyond Style</title>
+  <meta name="description" content="TRINEX — Luxury streetwear. See Beyond Style.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width='100' height='100' fill='%23000' /><text x='50' y='55' font-size='46' text-anchor='middle' fill='%23D4AF37' font-family='Arial'>T</text></svg>">
+  <style>
+    :root{--bg:#000;--gold:#D4AF37;--muted:#bdbdbd;--maxw:1100px}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial;color:#fff;background:var(--bg);-webkit-font-smoothing:antialiased}
+    .container{max-width:var(--maxw);margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:48px;height:48px;background:linear-gradient(180deg,var(--gold),#b98d2e);display:flex;align-items:center;justify-content:center;border-radius:6px;color:#000;font-weight:700}
+    nav a{color:var(--gold);text-decoration:none;margin-left:18px;font-weight:600}
+    .hero{display:flex;align-items:center;gap:36px;padding:48px 0}
+    .hero-left{flex:1}
+    .hero h1{font-size:48px;line-height:1.02;margin:0 0 12px}
+    .tag{color:var(--muted);margin-bottom:18px}
+    .cta{display:inline-block;background:var(--gold);color:#000;padding:12px 18px;border-radius:6px;font-weight:700;text-decoration:none}
+    .hero-right{flex:1;text-align:right}
+    .hero-right img{max-width:420px;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.6)}
+
+    /* Products */
+    .section{padding:40px 0;border-top:1px solid rgba(255,255,255,.03)}
+    .section h2{color:var(--gold);margin:0 0 18px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:14px;border-radius:10px}
+    .card img{width:100%;height:240px;object-fit:cover;border-radius:8px}
+    .card h3{margin:10px 0 6px;font-size:18px}
+    .price{font-weight:700;color:var(--gold)}
+    .btn{display:inline-block;padding:8px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.06);text-decoration:none;color:inherit;margin-top:8px}
+
+    /* About */
+    .about{display:flex;gap:28px;align-items:center}
+    .about img{width:320px;border-radius:8px}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px}
+    .gallery img{width:100%;height:140px;object-fit:cover;border-radius:6px}
+
+    footer{padding:30px 0;color:var(--muted);font-size:14px;border-top:1px solid rgba(255,255,255,.03)}
+
+    /* Responsive */
+    @media (max-width:800px){
+      .hero{flex-direction:column}
+      .hero-right{text-align:left}
+      .hero-right img{max-width:100%}
+      .about{flex-direction:column}
+      .about img{width:100%}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">T</div>
+        <div>
+          <div style="font-weight:800;letter-spacing:2px">TRINEX</div>
+          <div style="font-size:12px;color:var(--muted)">SEE BEYOND STYLE.</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="hero-left">
+          <h1>TRINEX<br><span style="color:var(--gold)">Luxury Streetwear</span></h1>
+          <p class="tag">Bold lines. Minimal attitude. Crafted for those who see beyond the ordinary.</p>
+          <a class="cta" href="#shop">Shop the Drop</a>
+        </div>
+        <div class="hero-right">
+          <img src="https://images.unsplash.com/photo-1520975923389-0b2c7c7f6f4a?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=0a3c1f7f5b9a1b9f3d1c7e6d" alt="TRINEX hero">
+        </div>
+      </section>
+
+      <section id="shop" class="section">
+        <h2>Featured</h2>
+        <div class="grid">
+          <!-- Product 1 -->
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=0f1c0bd3d6d8b9f2a3f8f7c1" alt="product1">
+            <h3>TRINEX Black Hoodie</h3>
+            <div class="price">₹1,899</div>
+            <a class="btn" href="#contact" onclick="alert('Demo: Add real buy integration later')">Enquire / Buy</a>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1520975918803-4c2f7f0d1a5e?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=3b1e0d3f4c2f1ef6a4c8d9b2" alt="product2">
+            <h3>TRINEX Tee — Gold Print</h3>
+            <div class="price">₹799</div>
+            <a class="btn" href="#contact" onclick="alert('Demo: Add real buy integration later')">Enquire / Buy</a>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=0f1c0bd3d6d8b9f2a3f8f7c1" alt="product3">
+            <h3>TRINEX Joggers — Urban Fit</h3>
+            <div class="price">₹1,199</div>
+            <a class="btn" href="#contact" onclick="alert('Demo: Add real buy integration later')">Enquire / Buy</a>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1520975923389-0b2c7c7f6f4a?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=0a3c1f7f5b9a1b9f3d1c7e6d" alt="product4">
+            <h3>TRINEX Cap — Signature</h3>
+            <div class="price">₹499</div>
+            <a class="btn" href="#contact" onclick="alert('Demo: Add real buy integration later')">Enquire / Buy</a>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <h2>About TRINEX</h2>
+        <div class="about">
+          <div>
+            <p style="color:var(--muted);max-width:650px">TRINEX is a modern luxury streetwear label born from the idea that fashion should be bold yet timeless. Combining premium materials, precise cuts, and a minimal aesthetic, TRINEX creates pieces that stand out without shouting. Rooted in vision and crafted for confidence — every garment is designed to be a statement.</p>
+            <p style="margin-top:10px;color:var(--muted)"><strong>Tagline:</strong> SEE BEYOND STYLE.</p>
+          </div>
+          <img src="https://images.unsplash.com/photo-1520975918803-4c2f7f0d1a5e?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=3b1e0d3f4c2f1ef6a4c8d9b2" alt="about image">
+        </div>
+      </section>
+
+      <section id="gallery" class="section">
+        <h2>Gallery</h2>
+        <div class="gallery">
+          <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=0f1c0bd3d6d8b9f2a3f8f7c1" alt="g1">
+          <img src="https://images.unsplash.com/photo-1520975923389-0b2c7c7f6f4a?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=0a3c1f7f5b9a1b9f3d1c7e6d" alt="g2">
+          <img src="https://images.unsplash.com/photo-1520975918803-4c2f7f0d1a5e?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=3b1e0d3f4c2f1ef6a4c8d9b2" alt="g3">
+          <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=0f1c0bd3d6d8b9f2a3f8f7c1" alt="g4">
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p style="color:var(--muted)">For orders, collaborations or wholesale inquiries — message us on Instagram or send an email.</p>
+        <form onsubmit="submitForm(event)" style="max-width:560px">
+          <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
+            <input id="name" placeholder="Your name" required style="flex:1;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,.06);background:transparent;color:#fff">
+            <input id="email" type="email" placeholder="Email" required style="flex:1;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,.06);background:transparent;color:#fff">
+          </div>
+          <textarea id="message" placeholder="Message" required style="width:100%;margin-top:10px;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,.06);background:transparent;color:#fff;height:120px"></textarea>
+          <div style="margin-top:10px">
+            <button class="cta" type="submit">Send Message</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>© <strong>TRINEX</strong> — {2025}</div>
+        <div style="color:var(--muted)">Follow us on Instagram — <a href="https://instagram.com" style="color:var(--gold);text-decoration:none">@trinex</a></div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    function submitForm(e){
+      e.preventDefault();
+      const name=document.getElementById('name').value;
+      const email=document.getElementById('email').value;
+      const message=document.getElementById('message').value;
+      // For demo, open mailto with prefilled content — replace with real backend later
+      const subject=encodeURIComponent('TRINEX inquiry from '+name+' ('+email+')');
+      const body=encodeURIComponent(message);
+      window.location.href='mailto:trinex.brand@example.com?subject='+subject+'&body='+body;
+    }
+  </script>
+</body>
+</html>
